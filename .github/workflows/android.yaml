@@ -21,8 +21,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Generate Required Gradle Wrapper
-        run: gradle wrapper --gradle-version 8.8.1
+      - name: Generate Gradle 8.9 Wrapper
+        run: gradle wrapper --gradle-version 8.9
         working-directory: ./puti-mic
 
       - name: Build Debug APK
