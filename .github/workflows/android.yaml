@@ -1,5 +1,9 @@
 name: Android Build
 
+steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v5
+
 on:
   push:
     branches: [ main ]
