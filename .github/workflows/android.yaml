@@ -24,7 +24,7 @@ jobs:
       - name: Restore google-services.json
         run: |
           mkdir -p puti-mic/app
-          echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > puti-mic/app/google-services.json
+          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 -d > puti-mic/app/google-services.json
 
       - name: Generate Debug Keystore
         working-directory: ./puti-mic
